@@ -7,6 +7,28 @@ Do not use the built in Array#forEach.
 
 Examples:
 
+
+*******************************************************************************/
+// input array and callback 
+// output? 
+// steps
+// 1. iterate through the array in the  myForEach function
+// 2. set the ele to the [i] of array 
+// 3. call the callback 
+// 4. set the cb as a new variable
+
+let myForEach = function (array, cb) {
+    for (let i = 0; i < array.length; i++) {
+        let ele = array[i];
+        cb(ele, i, array)
+    }
+
+};
+
+let func = function (ele, i, array) {
+    //console.log(el + ' is at index ' + i);
+}
+
 myForEach(['a', 'b', 'c'], function (el, i) {
     console.log(el + ' is at index ' + i);
 }); // prints
@@ -19,14 +41,5 @@ myForEach(['laika', 'belka'], function (el) {
     test.push(el.toUpperCase());
 });
 console.log(test); // ['LAIKA', 'BELKA']
-*******************************************************************************/
-
-let myForEach = function() {
-
-};
-
-
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myForEach;
