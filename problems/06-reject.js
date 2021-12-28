@@ -10,6 +10,28 @@ problem.
 
 Examples:
 
+
+*******************************************************************************/
+//1. set an array and a callback as arguments
+//2. set a new varibale as a new array
+//3. create a for loop
+//4. write a conditional that resolved in false when given the callback
+//5. push the new array
+//6. return the new array
+
+
+let reject = function(arr,cb) {
+    let arr1=[];
+    for (let i=0; i<arr.length; i++){
+        if (cb(arr[i]) === false){
+            arr1.push(arr[i])
+        }
+    }
+    return arr1;
+
+};
+
+
 let isEven = function(n) {
     return n % 2 === 0;
 };
@@ -19,14 +41,6 @@ let hasA = function(s) {
     return s.toLowerCase().includes('a');
 };
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
-*******************************************************************************/
-
-let reject = function() {
-
-};
-
-
-
 
 
 
