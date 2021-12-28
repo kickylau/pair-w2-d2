@@ -17,6 +17,8 @@ Examples:
 // 3. call the callback 
 // 4. set the cb as a new variable
 
+
+
 let myForEach = function (array, cb) {
     for (let i = 0; i < array.length; i++) {
         let ele = array[i];

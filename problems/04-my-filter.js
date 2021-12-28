@@ -8,6 +8,28 @@ Do not use the built in Array#filter.
 
 Examples:
 
+
+*******************************************************************************/
+//1. put array and a callback as arguments
+//2. declare a new varibale as a new array
+//3. create a for loop
+//4. create a new variable equal to array index
+//5. check if elements passed in the callback are true
+
+
+let myFilter = function(arr,cb) {
+    let arr1=[];
+    for (let i=0; i<arr.length; i++){
+        let ele = arr[i];
+        if (cb(ele) === true){
+            arr1.push(ele);
+        }
+
+    }
+    return arr1;
+};
+
+
 let result1 = myFilter([5, 7, 4, 3, 8], function (n) {
     return n % 2 === 0;
 });
@@ -17,14 +39,6 @@ let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
     return s.length > 3;
 });
 console.log(result2);      // ['choose', 'words', 'only']
-*******************************************************************************/
-
-let myFilter = function() {
-
-};
-
-
-
 
 
 
