@@ -7,6 +7,27 @@ into the callback.
 
 Examples:
 
+*******************************************************************************/
+
+// input array and callback
+// output true or false
+// steps
+// 1. set array and callback as arguments for mySome function
+// 2. create a for loop and iterate through array
+// 3. apply callback into index 
+// 4. if its true return true else return false
+
+let mySome = function(array, cb) {
+    for(let i = 0; i < array.length; i ++){
+        if (cb(array[i],i)=== true ) return true
+    }
+     return false
+};
+
+
+
+
+
 let result1 = mySome([5, 1, 7, 9], function(ele, i) {
     return ele === i;
 });
@@ -21,16 +42,6 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
     return ele.length === 4;
 });
 console.log(result3);   // true
-*******************************************************************************/
-
-let mySome = function() {
-
-};
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = mySome;
